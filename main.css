@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
-
+/* General Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,49 +9,39 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Header Sect. */
+/* Header */
 .header {
   display: flex;
   margin: auto;
   flex-direction: column;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 50%;
 }
 
-#header-1 {
+.header-1:first-of-type {
   font-weight: 400;
 }
-#header-2 {
+
+.header-1:last-of-type {
   font-weight: 600;
 }
 
-/* Cards */
-#cards {
-  width: 67%;
-  margin: 1rem auto;
-}
-#group-1 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin: auto;
-  height: 67vh;
-  justify-content: space-evenly;
+.message {
+  font-size: 15px;
 }
 
-#group-2 {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 42%;
-  width: 65%;
-  margin-left: 12px;
+/* Cards */
+.cards {
+  width: 75%;
+  margin: 1rem auto 0 auto;
+  height: 80vh;
+  padding: 0;
 }
 
 .card {
-  width: 280px;
-  height: 200px;
+  width: 300px;
+  height: 220px;
   border-radius: 5px;
   position: relative;
   box-shadow: 0px 10px 12px 0px rgba(76, 78, 97, 0.25);
@@ -63,42 +52,92 @@ body {
   margin: 1rem auto;
 }
 
-#group-1 .card:nth-child(1) {
-  border-top: 5px solid #ea5353;
-}
-
-#group-1 .card:nth-child(2) {
-  border-top: 5px solid #fcaf4a;
-}
-
-#group-2 .card:nth-child(1) {
-  border-top: 5px solid #45d3d3;
-}
-
-#group-2 .card:nth-child(2) {
-  border-top: 5px solid #549ef2;
-}
-
-.card-header {
+.card-body {
   font-size: 15px;
 }
 
-.card-body {
-  font-weight: 200;
+.card:first-of-type {
+  top: 150px;
+  border-top: 5px solid #45d3d3;
+}
+
+.card:nth-child(2) {
+  top: 50px;
+  left: 35%;
+  border-top: 5px solid #ea5353;
+}
+.card:nth-child(3) {
+  left: 35%;
+  bottom: 440px;
+  border-top: 5px solid #fcaf4a;
+}
+.card:last-of-type {
+  left: 70%;
+  bottom: 510px;
+  border-top: 5px solid #549ef2;
 }
 
 .card-image {
   width: 18%;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  position: relative;
+  top: 40px;
+  left: 190px;
 }
-
 /* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: #3e52a3;
+  color: hsl(228, 45%, 44%);
+}
+
+/* Queriers */
+@media (min-width: 375px) and (max-width: 1439px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    width: 100vw;
+    display: flex;
+    margin: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+    margin: 1rem;
+  }
+
+  .card {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .card:first-of-type {
+    left: 0%;
+    top: 0;
+  }
+
+  .card:nth-child(2) {
+    top: 30px;
+    left: 0%;
+  }
+  .card:nth-child(3) {
+    top: 60px;
+    left: 0%;
+  }
+  .card:last-of-type {
+    top: 90px;
+    left: 0%;
+  }
 }
