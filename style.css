@@ -1,0 +1,106 @@
+:root {
+  --main-red: hsl(0, 78%, 62%);
+  --cyan-color: hsl(180, 62%, 55%);
+  --main-orange: hsl(34, 97%, 64%);
+  --main-blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --gray-blue: hsl(229, 6%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyan-border {
+  border-top: 4px solid var(--cyan-color);
+}
+
+.orange-border {
+  border-top: 4px solid var(--main-orange);
+}
+
+.red-border {
+  border-top: 4px solid var(--main-red);
+}
+
+.dark-blue-border {
+  border-top: 4px solid var(--main-blue);
+}
+
+.header {
+  text-align: center;
+  width: 50%;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.header-title {
+  font-weight: 200;
+}
+
+.header-title span {
+  font-weight: 600;
+}
+
+.header-message {
+  margin-top: 0.7rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-group:nth-of-type(2) .card {
+  margin: 1rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 6px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-body p {
+  font-size: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    width: 100%;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
